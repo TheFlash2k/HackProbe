@@ -1,5 +1,5 @@
 deepdiff==6.3.0
-Flask==2.1.2
-Flask_Cors==3.0.10
+fastapi==0.99.0
 pymongo==4.4.0
 requests==2.27.1
+uvicorn==0.22.0
