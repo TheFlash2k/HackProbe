@@ -95,6 +95,7 @@ python3 sync.py -f <path/to/json/file>
 
 - [x] A quick search engine to search for the commands that you need to carry out a certain task
 - [x] A script to sync the local cheat-sheet cache and the remote database
+- [ ] A Markdown to JSON parser to make it easier for users to add their own cheat sheets inside HackProbe.
 - [ ] A really really pretty frontend that is easy to use and navigate
 - [ ] A `docker-compose.yml` file that can be used to deploy the API, database and the frontend altogether
 - [ ] A way to share your cheat sheets with others
