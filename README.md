@@ -57,6 +57,24 @@ In case the API is not running locally, or is running on a different port:
 python3 search.py <command> --host <host> --port <port>
 ```
 
+You can also use `-c` or `--cmd` flag with the `search.py` to display only the commands that match the search query.
+
+```bash
+python3 search.py linux scp -c -H 127.0.0.1 -p 5000
+```
+
+Gives the following output:
+
+```bash
+[+] Followings commands were found
+1. scp local-file user@ip:/remote/path/to/drop/to
+2. scp -P remote-ssh-port local-file user@ip:/remote/path/to/drop/to
+3. scp -i key.pem local-file user@ip:/remote/path/to/drop/to
+4. scp user@ip:/remote/path/to/drop/to local-file
+5. scp -P remote-ssh-port user@ip:/remote/path/to/drop/to  local-file
+6. scp -i key.pem user@ip:/remote/path/to/drop/to local-file
+```
+
 #### Sync
 
 To update the database and the local JSON file:
