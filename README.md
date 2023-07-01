@@ -80,7 +80,13 @@ Gives the following output:
 To update the database and the local JSON file:
 
 ```bash
-python3 scripts/sync.py
+python3 sync.py
+```
+
+If you want to specify a custom JSON file:
+
+```bash
+python3 sync.py -f <path/to/json/file>
 ```
 
 > NOTE: Please make sure that you have set the variables inside config.ini file correctly before running this script
