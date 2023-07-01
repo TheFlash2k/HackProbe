@@ -4,7 +4,7 @@
 
 ## What is HackProbe?
 
-HackProbe is a Flask-based API that uses MongoDB to perform fuzzy searching on the JSON cheat sheet that you create.
+HackProbe is a search engine for JSON-based cheat sheets. It is a simple FastAPI based API that can be used to search for commands that you need to carry out a certain task. It is currently in development and is not ready for production use.
 
 > Note: I will provide you with a pretty big JSON file that you can use to test the API. You can also use it to create your own cheat sheet.
 
@@ -12,8 +12,8 @@ Currently, HackProbe does not have any frontend, therefore we must rely on `sear
 
 ### Prerequisites
 
-- Python3
-- Pip3
+- python3
+- pip3
 
 ### Installation
 
