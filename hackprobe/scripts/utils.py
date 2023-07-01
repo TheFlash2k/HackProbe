@@ -14,9 +14,9 @@ class Config:
     db_name : str = ""
     collection_name : str = ""
 
-def msg(_msg, mode='*'):
+def msg(_msg, mode='*', *args, **kwargs):
     _mode = { "+" : Colors.GREEN, "!" : Colors.RED, "?" : Colors.YELLOW, "*" : Colors.BLUE }
-    print(f"[{_mode[mode]}{mode}{Colors.RESET}] {_msg}")
+    print(f"[{_mode[mode]}{mode}{Colors.RESET}] {_msg}", *args, **kwargs)
 
 def check_db():
     try:
@@ -65,14 +65,11 @@ def check_config(config_file='config.ini'):
     Config.collection_name = config['DB-CONFIG']['collection_name']
 
     msg("Config file is valid and variables have been set.", '+')
-    msg(f"Connection String: {Colors.GREEN}{Config.conn_string}{Colors.RESET}", '*')
-    msg(f"Database Name    : {Colors.GREEN}{Config.db_name}{Colors.RESET}", '*')
-    msg(f"Collection Name  : {Colors.GREEN}{Config.collection_name}{Colors.RESET}", '*')
+    msg(f"Connection String : {Colors.GREEN}{Config.conn_string}{Colors.RESET}", '*')
+    msg(f"Database Name     : {Colors.GREEN}{Config.db_name}{Colors.RESET}", '*')
+    msg(f"Collection Name   : {Colors.GREEN}{Config.collection_name}{Colors.RESET}", '*')
 
     msg("Checking database connection...", '*')
     if not check_db():
         msg("Please check your database connection.", '!')
-        exit(1)
-    msg("Starting the server...", '*')
-
     return True

@@ -54,6 +54,7 @@ if __name__ == '__main__':
     if not check_config(config_file=args.config):
         exit(1)
 
+    msg("Starting the server...", '*')
     app.run(
         host=args.host,
         port=args.port,
