@@ -69,17 +69,12 @@ python3 scripts/sync.py
 
 ## What I want HackProbe to be
 
-[x] - A quick search engine to search for the commands that you need to carry out a certain task
-
-[x] - A script to sync the local cheat-sheet cache and the remote database
-
-[ ] - A really really pretty frontend that is easy to use and navigate
-
-[ ] - A `docker-compose.yml` file that can be used to deploy the API, database and the frontend altogether
-
-[ ] - A way to share your cheat sheets with others
-
-[ ] - An admin frontend to add, edit and delete cheat sheets without having to mess with RAW JSON
+- [x] A quick search engine to search for the commands that you need to carry out a certain task
+- [x] A script to sync the local cheat-sheet cache and the remote database
+- [ ] A really really pretty frontend that is easy to use and navigate
+- [ ] A `docker-compose.yml` file that can be used to deploy the API, database and the frontend altogether
+- [ ] A way to share your cheat sheets with others
+- [ ] An admin frontend to add, edit and delete cheat sheets without having to mess with RAW JSON
 
 ---
 
