@@ -15,6 +15,7 @@ HackProbe is a search engine for JSON-based cheat sheets. It is a simple FastAPI
 Hackprobe uses Next.js as the frontend and FastAPI as the backend. To run the project, you need to have Node.js 14+ installed on your system.
 
 ```sh
+cd app/
 npm install
 npm run dev
 ```
@@ -22,5 +23,9 @@ npm run dev
 ### NOTE
 
 This is currently a work in progress. I will update this README as I make progress on the project. I'm making this project in my spare time. If you want to contribute, please feel free to do so.
+
+### Contributors
+
+- [Muhammad Azeem](https://github.com/mazeem77) - Helped with the frontend of HackProbe.
 
 ---
