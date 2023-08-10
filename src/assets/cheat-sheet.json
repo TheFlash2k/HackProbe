@@ -1,0 +1,280 @@
+[
+  {
+    "commands": [
+      {
+        "cmd": "Add-MpPreference -ExclusionPath <PATH>",
+        "description": "Powershell command to add exclusion",
+        "examples": [
+          "Add-MpPreference -ExclusionPath C:\\Users\\user\\Desktop\\file.exe"
+        ]
+      }
+    ],
+    "description": "Adding a file to Microsoft Windows Defender Exclusion List",
+    "tags": [
+      "windows",
+      "defender",
+      "exclusion",
+      "antivirus",
+      "antimalware",
+      "add-mppreference",
+      "file"
+    ]
+  },
+  {
+    "commands": [
+      {
+        "cmd": "Get-MpPreference",
+        "description": "Powershell command to list all the exclusions added to Windows Defender",
+        "examples": [
+          "Get-MpPreference",
+          "Get-MpPreference | Select-Object -ExpandProperty ExclusionPath"
+        ]
+      }
+    ],
+    "description": "Using Powershell to list all the exclusions added to Windows Defender",
+    "tags": [
+      "windows",
+      "defender",
+      "exclusion",
+      "antivirus",
+      "antimalware",
+      "file",
+      "get-mppreference",
+      "exclusionpath",
+      "powershell"
+    ]
+  },
+  {
+    "commands": [
+      {
+        "cmd": "Remove-MpPreference -ExclusionPath <PATH>",
+        "description": "Powershell command to remove an exclusion from Windows Defender",
+        "examples": [
+          "Remove-MpPreference -ExclusionPath C:\\Users\\user\\Desktop\\file.exe"
+        ]
+      }
+    ],
+    "description": "Using Powershell to remove an exclusion from Windows Defender",
+    "tags": [
+      "windows",
+      "defender",
+      "exclusion",
+      "antivirus",
+      "antimalware",
+      "file",
+      "remove-mppreference",
+      "exclusionpath",
+      "powershell"
+    ]
+  },
+  {
+    "commands": [
+      {
+        "cmd": "scp local-file user@ip:/remote/path/to/drop/to",
+        "description": "Basic Usage",
+        "examples": ["scp test.txt user@192.168.18.15:/root/test.txt"]
+      },
+      {
+        "cmd": "scp -P remote-ssh-port local-file user@ip:/remote/path/to/drop/to",
+        "description": "Specifying remote SSH port",
+        "examples": ["scp -P 2222 test.txt user@192.168.18.15:/root/test.txt"]
+      },
+      {
+        "cmd": "scp -i key.pem local-file user@ip:/remote/path/to/drop/to",
+        "description": "Specifying SSH key",
+        "examples": [
+          "scp -i key.pem test.txt user@192.168.18.15:/root/test.txt"
+        ]
+      }
+    ],
+    "description": "Using SCP to upload a file to the remote server",
+    "tags": ["upload", "scp", "ssh", "remote", "put", "drop", "file", "linux"]
+  },
+  {
+    "commands": [
+      {
+        "cmd": "scp user@ip:/remote/path/to/drop/to local-file",
+        "description": "Basic Usage",
+        "examples": ["scp user@192.168.18.15:/root/test.txt test.txt"]
+      },
+      {
+        "cmd": "scp -P remote-ssh-port user@ip:/remote/path/to/drop/to  local-file",
+        "description": "Specifying remote SSH port",
+        "examples": ["scp -P 2222 user@192.168.18.15:/root/test.txt test.txt"]
+      },
+      {
+        "cmd": "scp -i key.pem user@ip:/remote/path/to/drop/to local-file",
+        "description": "Specifying SSH key",
+        "examples": [
+          "scp -i key.pem user@192.168.18.15:/root/test.txt test.txt"
+        ]
+      }
+    ],
+    "description": "Using SCP to download a file to the remote server",
+    "tags": [
+      "download",
+      "scp",
+      "ssh",
+      "remote",
+      "put",
+      "drop",
+      "file",
+      "linux",
+      "pem",
+      "ssh-key",
+      "key-file",
+      "port"
+    ]
+  },
+  {
+    "commands": [
+      {
+        "cmd": "curl -sL http://IP -o file",
+        "description": "Using cURL (Available on Both Linux and Windows now)",
+        "examples": [
+          "curl -sL http://192.168.0.100:9000/test.txt -o /tmp/test.txt"
+        ]
+      }
+    ],
+    "description": "Using curl to download files to the machine",
+    "tags": [
+      "download",
+      "file",
+      "curl",
+      "linux",
+      "windows",
+      "cmd",
+      "powershell"
+    ]
+  },
+  {
+    "commands": [
+      {
+        "cmd": "wget http://IP -O file",
+        "description": "Using wget",
+        "examples": [
+          "wget http://10.10.11.50:1234/main.sh",
+          "wget http://10.10.11.50:1234/main.sh -O /tmp/main.sh"
+        ]
+      }
+    ],
+    "description": "Using wget to download files to the machine",
+    "tags": ["download", "file", "wget", "windows", "linux", "cmd"]
+  },
+  {
+    "commands": [
+      {
+        "cmd": "Invoke-WebRequest -Uri <source> -OutFile <destination>",
+        "description": "Using Invoke-WebRequest to download files",
+        "examples": [
+          "Invoke-WebRequest -Uri http://10.10.15.50:9000/test.txt -OutFile /tmp/test.txt",
+          "iwr http://10.10.15.50:9000/test.txt -OutFile /tmp/test.txt",
+          "powershell -c \"Invoke-WebRequest -Uri http://10.10.15.50:9000/test.txt -OutFile /tmp/test.txt\"",
+          "powershell -c \"iwr http://10.10.15.50:9000/test.txt -OutFile /tmp/test.txt\""
+        ]
+      }
+    ],
+    "description": "Using powershell to download files",
+    "tags": [
+      "download",
+      "file",
+      "powershell",
+      "windows",
+      "invoke-webrequest",
+      "iwr",
+      "webrequest",
+      "powershell -c"
+    ]
+  },
+  {
+    "commands": [
+      {
+        "cmd": "(New-Object System.Net.WebClient).DownloadFile(<source>, <destination>)",
+        "description": "Using .NET WebClient to download files",
+        "examples": [
+          "(New-Object System.Net.WebClient).DownloadFile('http://10.10.50.200', 'C:\\Users\\Public\\Downloads\\file.exe')"
+        ]
+      }
+    ],
+    "description": "Using powershell to download files (.NET WebClient)",
+    "tags": [
+      "download",
+      "file",
+      "powershell",
+      "windows",
+      ".net",
+      "webclient",
+      "system.net",
+      "powershell -c"
+    ]
+  },
+  {
+    "commands": [
+      {
+        "cmd": "certutil -urlcache -split -f http://IP file",
+        "description": "Using certutil to download files",
+        "examples": [
+          "certutil -urlcache -split -f http://10.10.50.200/test.txt C:\\Users\\Public\\Downloads\\test.txt"
+        ]
+      }
+    ],
+    "description": "Using certutil to download files",
+    "tags": [
+      "download",
+      "file",
+      "cmd",
+      "cmd.exe",
+      "batch",
+      "windows",
+      "certutil"
+    ]
+  },
+  {
+    "commands": [
+      {
+        "cmd": "bitsadmin /transfer n http://IP/file C:\\Users\\Public\\Downloads\\file",
+        "description": "Using bitsadmin to download files",
+        "examples": [
+          "bitsadmin /transfer n http://10.10.50.200/admin.txt C:\\Users\\Public\\Downloads\\admin.txt"
+        ]
+      }
+    ],
+    "description": "Using bitsadmin to download files",
+    "tags": [
+      "download",
+      "file",
+      "cmd",
+      "cmd.exe",
+      "batch",
+      "windows",
+      "bitsadmin"
+    ]
+  },
+  {
+    "commands": [
+      {
+        "cmd": "runas.exe /netonly /user:domain\\username cmd.exe",
+        "description": "Using runas to run a command as a different user. You will be prompted for password.",
+        "examples": ["runas.exe /netonly /user:domain\\username cmd.exe"]
+      },
+      {
+        "cmd": "runas.exe /netonly /user:domain\\username \"cmd.exe /c <command>\"",
+        "description": "Using runas to run a command and get output directly",
+        "examples": [
+          "runas.exe /netonly /user:domain\\username \"cmd.exe /c whoami\""
+        ]
+      }
+    ],
+    "description": "Using runas to run a command as a different user",
+    "tags": [
+      "runas",
+      "different",
+      "user",
+      "netonly",
+      "user",
+      "windows",
+      "cmd.exe",
+      "cmd"
+    ]
+  }
+]
