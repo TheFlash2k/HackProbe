@@ -4,7 +4,7 @@
 
 ## What is HackProbe?
 
-HackProbe is a search engine for JSON-based cheat sheets. It is a simple FastAPI based API that can be used to search for commands that you need to carry out a certain task. It is currently in development and is not ready for production use.
+HackProbe is a search engine for JSON-based cheat sheets. It is a simple NextJS based API that allows for quick searching using tags specified inside the JSON file.
 
 > Note: I will provide you with a pretty big JSON file that you can use to test the API. You can also use it to create your own cheat sheet.
 
@@ -12,7 +12,7 @@ HackProbe is a search engine for JSON-based cheat sheets. It is a simple FastAPI
 
 ## How to use HackProbe?
 
-Hackprobe uses Next.js as the frontend and FastAPI as the backend. To run the project, you need to have Node.js 14+ installed on your system.
+Hackprobe uses Next.js. To run the project, you need to have Node.js 14+ installed on your system.
 
 ```sh
 cd app/
