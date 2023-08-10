@@ -20,6 +20,11 @@ npm install
 npm run dev
 ```
 
+## Screenshots
+
+Hackprobe is a single page website that allows quick command searching based on the provided `json` file
+![image](https://github.com/TheFlash2k/HackProbe/assets/19727349/c3b09274-20ae-42a5-97ec-b50393ca144e)
+
 ### NOTE
 
 This is currently a work in progress. I will update this README as I make progress on the project. I'm making this project in my spare time. If you want to contribute, please feel free to do so.
