@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Head from 'next/head'
 
 function Home() {
   const [term, setTerm] = useState([])
@@ -35,6 +36,12 @@ function Home() {
   }, [term])
   return (
     <div>
+      <Head>
+        <title>
+          HackProbe - The Search Engine
+        </title>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
       <div>
         <h1 className="text-4xl font-bold text-center mt-8">HackProbe - A JSON-based search Engine</h1>
       </div>
