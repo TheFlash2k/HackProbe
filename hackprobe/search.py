@@ -12,6 +12,7 @@ def search(host, port, query):
         if verbose:
             msg(f"Trying to connect to http://{host}:{port}", '*')
         res = requests.get(f"http://{host}:{port}/search?match={query}")
+        print(res.text)
         if res.status_code == 200:
             return res.json()['results']
         else:

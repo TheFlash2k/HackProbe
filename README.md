@@ -2,6 +2,10 @@
 
 ---
 
+## NOTE: This branch has been deprecated as I switched the entire project to `NextJS`. Please check out the master branch...
+
+---
+
 ## What is HackProbe?
 
 HackProbe is a search engine for JSON-based cheat sheets. It is a simple FastAPI based API that can be used to search for commands that you need to carry out a certain task. It is currently in development and is not ready for production use.
