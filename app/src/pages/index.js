@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import icon from '../../public/favicon.jpg'
 import Image from "next/image";
-import { ArrowDownward, ArrowDropDown, DoubleArrow, KeyboardArrowDown } from "@mui/icons-material";
+import { KeyboardArrowDown, MenuOpen, Menu } from "@mui/icons-material";
 
 function Home() {
   const [containerIndex2, setContainerIndex2] = useState([])
   const [containerIndex, setContainerIndex] = useState([])
   const [copiedIndex2, setCopiedIndex2] = useState(0)
-  const [isRotated, setIsRotated] = useState([])
-  const [isRotated2, setIsRotated2] = useState([])
   const [copiedIndex, setCopiedIndex] = useState(0)
+  const [isRotated2, setIsRotated2] = useState([])
   const [iconHide, setIconHide] = useState(false)
+  const [isRotated, setIsRotated] = useState([])
+  const [compact, setCompact] = useState(false)
   const [copied, setCopied] = useState(false)
   const [term, setTerm] = useState([])
   const [data, setData] = useState()
@@ -57,7 +58,10 @@ function Home() {
       <div className="flex justify-center items-center w-full">
         <input type="text" id="search" onChange={termParser} className="shadow border rounded mt-8 mb-6 py-2 px-3 dark:text-gray-300 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-[60%]" placeholder="Enter tags to search from." />
       </div>
-
+      <div className="flex justify-center items-center border-2 border-white w-fit rounded-xl overflow-auto m-2">
+        <button type="button" onClick={() => setCompact(true)} className={compact ? " bg-teal-400 p-2" : " p-2"}><Menu fontSize="large" /></button>
+        <button type="button" onClick={() => setCompact(false)} className={!compact ? " bg-teal-400 p-2" : " p-2"}><MenuOpen fontSize="large" /></button>
+      </div>
       <div>
         {data && data.results.map((result, index) => {
           return (
@@ -66,7 +70,7 @@ function Home() {
                 <div key={index2} className="flex w-full">
                   <div className={"relative flex flex-col justify-start items-start mb-4 p-4 rounded-xl bg-gray-700 shadow-xl w-full overflow-hidden"}>
                     <div className="absolute top-0 right-0 p-2">
-                      <KeyboardArrowDown className={`cursor-pointer transition-transform transform ${(result.commands.length > 1 ? isRotated2.includes(index2) : isRotated.includes(index)) ? ' -rotate-90' : ' rotate-0'}`}
+                      <KeyboardArrowDown className={`cursor-pointer transition-transform transform ${((result.commands.length > 1 ? isRotated2.includes(index2) : isRotated.includes(index))) ? ' -rotate-90' : ' rotate-0'}`}
                         onClick={() => {
                           if (!(result.commands.length > 1 ? isRotated2.includes(index2) : isRotated.includes(index))) {
                             setContainerIndex(prevIndices => [...prevIndices, index]);
