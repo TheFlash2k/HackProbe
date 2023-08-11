@@ -4,10 +4,11 @@ import Image from "next/image";
 import { ArrowDownward, ArrowDropDown, DoubleArrow, KeyboardArrowDown } from "@mui/icons-material";
 
 function Home() {
-  const [containerIndex2, setContainerIndex2] = useState(null)
-  const [containerIndex, setContainerIndex] = useState(null)
+  const [containerIndex2, setContainerIndex2] = useState([])
+  const [containerIndex, setContainerIndex] = useState([])
   const [copiedIndex2, setCopiedIndex2] = useState(0)
-  const [isRotated, setIsRotated] = useState(false)
+  const [isRotated, setIsRotated] = useState([])
+  const [isRotated2, setIsRotated2] = useState([])
   const [copiedIndex, setCopiedIndex] = useState(0)
   const [iconHide, setIconHide] = useState(false)
   const [copied, setCopied] = useState(false)
@@ -65,11 +66,36 @@ function Home() {
                 <div key={index2} className="flex w-full">
                   <div className={"relative flex flex-col justify-start items-start mb-4 p-4 rounded-xl bg-gray-700 shadow-xl w-full overflow-hidden"}>
                     <div className="absolute top-0 right-0 p-2">
-                      <KeyboardArrowDown className={`cursor-pointer transition-transform transform ${isRotated && index === containerIndex && index2 === containerIndex2 ? ' -rotate-90' : ' rotate-0'}`}
+                      <KeyboardArrowDown className={`cursor-pointer transition-transform transform ${(result.commands.length > 1 ? isRotated2.includes(index2) : isRotated.includes(index)) ? ' -rotate-90' : ' rotate-0'}`}
                         onClick={() => {
-                          setContainerIndex(index)
-                          setContainerIndex2(index2)
-                          setIsRotated(!isRotated)
+                          if (!(result.commands.length > 1 ? isRotated2.includes(index2) : isRotated.includes(index))) {
+                            setContainerIndex(prevIndices => [...prevIndices, index]);
+                            if (result.commands.length > 1) {
+                              console.log(containerIndex2.includes(index2))
+                              setContainerIndex2(prevIndices2 => [...prevIndices2, index2]);
+                            }
+
+                          }
+                          else {
+                            setContainerIndex(prevIndices => prevIndices.filter(i => i !== index));
+                            if (result.commands.length > 1) {
+                              console.log(containerIndex2.includes(index2))
+                              setContainerIndex2(prevIndices2 => prevIndices2.filter(i => i !== index2));
+                            }
+                          }
+                          if ((result.commands.length > 1 ? isRotated2.includes(index2) : isRotated.includes(index))) {
+                            setIsRotated(prevIndices => prevIndices.filter(i => i !== index));
+                            if (result.commands.length > 1) {
+                              console.log(containerIndex2.includes(index2))
+                              setIsRotated2(prevIndices2 => prevIndices2.filter(i => i !== index2))
+                            }
+                          } else {
+                            setIsRotated(prevIndices => [...prevIndices, index]);
+                            if (result.commands.length > 1) {
+                              console.log(containerIndex2.includes(index2))
+                              setIsRotated2(prevIndices2 => [...prevIndices2, index2]);
+                            }
+                          }
                         }} />
                     </div>
                     <div className="flex justify-start items-center">
@@ -86,7 +112,7 @@ function Home() {
                         {copied ? "Copied!" : ""}
                       </div> : <></>}
                     </div>
-                    {isRotated && index === containerIndex && index2 === containerIndex2 ? <></> : <>
+                    {(result.commands.length > 1 ? (containerIndex2.includes(index2)) : containerIndex.includes(index)) ? <></> : <>
                       <div className="flex justify-start items-end mt-4">
                         <h1 className="font-bold text-xl mr-2">Description: </h1>
                         <p>{command.description}</p>
